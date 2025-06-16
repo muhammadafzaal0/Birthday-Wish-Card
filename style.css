@@ -1,0 +1,208 @@
+/* REMOVE input[type="text"] styles as they're no longer needed */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ffe4ec, #fff0f5);
+  display: flex;
+  justify-content: center;
+  align-items: center; /* changed from center */
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.container {
+  text-align: center;
+  background: #fff;
+  padding: 35px 25px;
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+  max-width: 900px;
+  width: 100%;
+  font-size: 30px;
+  box-sizing: border-box;
+}
+.paragraph{
+  color: black;
+ font-size:15px;
+  font-weight:500;
+}
+.hidden {
+  display: none;
+}
+
+.animated-text {
+  animation: popUp 1s ease-in-out infinite alternate;
+  font-size: 2em;
+  color: #ff4f81;
+  margin-bottom: 30px;
+}
+
+@keyframes popUp {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+select {
+  width: 100%;
+  padding: 16px;
+  margin: 10px 0;
+  border: 2px solid #ffb6c1;
+  border-radius: 10px;
+  font-size: 1.1em;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #ff69b4;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+
+#errorText {
+  color: red;
+  font-size: 1em;
+  margin-top: 10px;
+  display: none;
+}
+
+.date-selectors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.date-selectors select {
+  flex: 1 1 45%;
+  min-width: 120px;
+  box-sizing: border-box;
+}
+
+.cards-section {
+  padding: 30px 15px;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
+
+.celebration-heading {
+  color: #ff1493;
+  font-size: 1.8em;
+  margin-bottom: 30px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 1200px; /* Set estimated height to avoid layout jumps */
+  position: relative;
+}
+
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateZ(0); /* Helps isolate rendering */
+  will-change: transform, opacity; /* Hints for better animation performance */
+}
+
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.tap-hint {
+  font-size: 0.9em;
+  color: #888;
+  display: none;
+}
+
+
+
+#replayBtn {
+  margin-top: 30px;
+  padding: 12px 20px;
+  font-size: 1em;
+  background-color:#ff1493;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#replayBtn:hover {
+  background-color: #ff4f81;
+}
+
+@keyframes slideInLeftRotate {
+  0% { transform: translateX(-100%) rotate(-5deg); opacity: 0; }
+  100% { transform: translateX(0) rotate(0); opacity: 1; }
+}
+
+@keyframes slideInRightRotate {
+  0% { transform: translateX(100%) rotate(5deg); opacity: 0; }
+  100% { transform: translateX(0) rotate(0); opacity: 1; }
+}
+
+.card.animate-left {
+  animation: slideInLeftRotate 2s ease forwards;
+}
+
+.card.animate-right {
+  animation: slideInRightRotate 2s ease forwards;
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 95%;
+    padding: 35px 20px;
+  }
+
+  .animated-text {
+    font-size: 2.2em;
+  }
+
+  .tap-hint {
+    display: inline-block;
+  }
+}
+
+
+.emoji {
+  position: fixed;
+  top: -50px;
+  font-size: 2rem;
+  z-index: 9999;
+  pointer-events: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 0;
+  }
+}

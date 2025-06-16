@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎉 Happy Birthday 🎉</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+  </audio> -->
+
+  <div class="container" id="welcomeSection">
+    <h1 class="animated-text">🎈 Let's Celebrate Ayesha! 🎈</h1>
+
+    <form id="birthdayForm">
+      <div class="date-selectors">
+        <select id="daySelect" required>
+          <option value="">Day 🎉</option>
+          <option value="17">17</option>
+        </select>
+        <select id="monthSelect" required>
+          <option value="">Month 🎊</option>
+          <option value="6">June</option>
+        </select>
+      </div>
+      <button type="submit">Let the Magic Begin ✨</button>
+    </form>
+    <p class="error" id="errorText">🎂 Please select 17 June to continue!</p>
+  </div>
+
+  <div class="cards-section hidden" id="cardsSection">
+    <h2 class="celebration-heading">
+      Happy Birthday Ayesha Bibi! 🎉🎂<br />
+      <div class="paragraph"><p >Wishing you the happiest of birthdays and a year filled with endless joy, laughter, and unforgettable memories. You’re one of the kindest and most genuine people I know, and I hope your day is as beautiful as your heart. May this year bring you closer to your dreams and bless you with success, peace, and everything you’ve ever wished for.
+Stay happy, stay blessed — and never stop being the amazing person you are! 💫🎈
+
+Enjoy your special day to the fullest! 🥳💐
+
+<p/><div/>
+      <span class="tap-hint">Tap anywhere to reveal your memories 📱✨</span>
+    </h2>
+    <div class="card-container">
+      <div class="card" id="card1">
+        <img src="img1" />
+        <p>From the little moments to big smiles, every memory matters 💖</p>
+      </div>
+      <div class="card" id="card2">
+        <img src="img2" />
+        <p>Your laughter is the best gift to everyone around you 😂🎁</p>
+      </div>
+      <div class="card" id="card3">
+        <img src="img3" />
+        <p>Keep shining and dreaming — the world needs your sparkle ✨</p>
+      </div>
+      <div class="card" id="card4">
+        <img src="img4" />
+        <p>This year is yours. Make it magical! 🎇🎊</p>
+      </div>
+    </div>
+    <button id="replayBtn">🔁 Replay Animation</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
